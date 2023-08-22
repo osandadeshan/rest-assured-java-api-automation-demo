@@ -98,6 +98,7 @@ public class RestClient {
 
     private RequestSpecification getRequestSpecification() {
         return given()
+                .filter(new Log4jFilter())
                 .spec(requestSpecification)
                 .log().all();
     }
