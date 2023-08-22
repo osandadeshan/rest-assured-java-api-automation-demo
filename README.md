@@ -2,7 +2,7 @@
 
 This project serves as a boilerplate for automating REST APIs across various environments using TestNG and the Rest Assured library.
 
-[![Rest Assured Java API Automation CI](https://github.com/osandadeshan/selenium-java-web-automation-demo/actions/workflows/selenium-java-ci.yml/badge.svg?branch=master)](https://github.com/osandadeshan/selenium-java-web-automation-demo/actions/workflows/selenium-java-ci.yml)
+[![Rest Assured Java API Automation CI](https://github.com/osandadeshan/rest-assured-java-api-automation-demo/actions/workflows/rest-assured-java-ci.yml/badge.svg?branch=master)](https://github.com/osandadeshan/rest-assured-java-api-automation-demo/actions/workflows/rest-assured-java-ci.yml)
 
 ## Prerequisites
 1. Java
