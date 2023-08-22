@@ -33,6 +33,7 @@
     </repositories>
 
     <profiles>
+        <!-- Environment profiles -->
         <profile>
             <id>dev</id>
             <activation>
@@ -66,6 +67,7 @@
                 <env>prod</env>
             </properties>
         </profile>
+        <!-- Test suite profiles -->
         <profile>
             <id>smoke-test</id>
             <build>
