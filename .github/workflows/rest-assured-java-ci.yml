@@ -1,7 +1,7 @@
 # GitHub Actions Workflow for Rest Assured Java API Automation
 
-# This GitHub Actions workflow is designed to build a Maven project and execute Selenium tests using the Chrome browser.
-# The automation project utilizes TestNG, Selenium, Maven, and Java as its core technologies.
+# This GitHub Actions workflow is designed to build a Maven project and execute Rest Assured API tests.
+# The automation project utilizes TestNG, Rest Assured, Maven, and Java as its core technologies.
 
 # For more details on building and testing Java projects with Maven using GitHub Actions, please refer to the official documentation:
 # https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
