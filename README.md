@@ -18,9 +18,13 @@ This project serves as a boilerplate for automating REST APIs across various env
 
 
 2. Using Command Line
-    * To run tests against the UAT environment
+    * To run the smoke test suite against the UAT environment
 
-      `mvn clean test -Puat`
+      `mvn clean test -Puat,smoke-test`
+
+    * To run the regression test suite against the QA environment
+
+      `mvn clean test -Pqa,regression-test`
 
 **Note**: By default, if no Maven profiles are selected, the tests will be executed on the `dev` environment.
 

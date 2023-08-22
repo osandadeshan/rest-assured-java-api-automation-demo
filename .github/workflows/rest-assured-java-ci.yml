@@ -50,7 +50,7 @@ jobs:
           mvn -version
 
       - name: Execute regression test suite
-        run: mvn clean test -Pqa
+        run: mvn clean test -Pqa,smoke-test
 
       - name: Archive logs
         if: always()

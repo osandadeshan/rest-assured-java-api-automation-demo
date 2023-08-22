@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API Automation Demo Smoke Test Suite">
+    <test name="Smoke Test">
+        <classes>
+            <class name="AuthTest" />
+            <class name="GetAllUsersTest" />
+        </classes>
+    </test>
+</suite>
