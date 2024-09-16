@@ -1,22 +1,15 @@
-import com.maxsoft.testngtestresultsanalyzer.TestAnalyzeReportListener;
+package com.restassured.example.test;
+
+import com.restassured.example.util.TestListener;
 import net.andreinc.mockneat.MockNeat;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
-import static constant.CommonConstants.EXECUTION_ENV_NAME;
+import static com.restassured.example.constant.CommonConstant.EXECUTION_ENV_NAME;
 
-/**
- * Project Name    : rest-assured-java-api-automation-demo
- * Developer       : Osanda Deshan
- * Version         : 1.0.0
- * Date            : 21/8/23
- * Time            : 5:35 pm
- * Description     :
- **/
-
-@Listeners(TestAnalyzeReportListener.class)
+@Listeners(TestListener.class)
 public class BaseTest {
     private final Logger logger = LogManager.getLogger();
 

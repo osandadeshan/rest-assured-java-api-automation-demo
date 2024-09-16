@@ -1,4 +1,4 @@
-package util;
+package com.restassured.example.util;
 
 import io.restassured.filter.Filter;
 import io.restassured.filter.FilterContext;
@@ -9,15 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
-
-/**
- * Project Name    : rest-assured-java-api-automation-demo
- * Developer       : Osanda Deshan
- * Version         : 1.0.0
- * Date            : 21/8/23
- * Time            : 9:27 pm
- * Description     :
- **/
 
 public class Log4jFilter implements Filter {
     private final Logger logger = LogManager.getLogger();

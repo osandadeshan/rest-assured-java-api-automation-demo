@@ -2,8 +2,8 @@
 <suite name="API Automation Demo Smoke Test Suite">
     <test name="Smoke Test">
         <classes>
-            <class name="AuthTest" />
-            <class name="GetAllUsersTest" />
+            <class name="com.restassured.example.test.AuthTest" />
+            <class name="com.restassured.example.test.GetAllUsersTest" />
         </classes>
     </test>
 </suite>

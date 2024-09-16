@@ -1,28 +1,23 @@
+package com.restassured.example.test;
+
+import com.restassured.example.Category;
+import com.restassured.example.util.RestClient;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import util.RestClient;
 
 import java.util.Collections;
 
-import static common.HttpMethod.PATCH;
-import static common.HttpMethod.PUT;
-import static constant.ApplicationConstants.GO_REST_SERVICE_BASE_URL;
-import static constant.ApplicationConstants.USER_SERVICE_ENDPOINT;
-import static constant.Gender.FEMALE;
-import static constant.Status.INACTIVE;
+import static com.restassured.example.HttpMethod.PATCH;
+import static com.restassured.example.HttpMethod.PUT;
+import static com.restassured.example.constant.ApplicationConstant.GO_REST_SERVICE_BASE_URL;
+import static com.restassured.example.constant.ApplicationConstant.USER_SERVICE_ENDPOINT;
+import static com.restassured.example.service.app.UserService.getUserIdFromUserDb;
+import static com.restassured.example.test.constant.Gender.FEMALE;
+import static com.restassured.example.test.constant.Status.INACTIVE;
+import static com.restassured.example.test.constant.TestCategory.USER;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.Matchers.*;
-import static service.UserService.getUserIdFromUserDb;
-
-/**
- * Project Name    : rest-assured-java-api-automation-demo
- * Developer       : Osanda Deshan
- * Version         : 1.0.0
- * Date            : 14/8/23
- * Time            : 12:11 pm
- * Description     :
- **/
 
 public class UpdateUserTest extends BaseTest {
     private String updateUserEndpoint;
@@ -45,6 +40,7 @@ public class UpdateUserTest extends BaseTest {
         updateUserRequestJson.put("status", status);
     }
 
+    @Category(USER)
     @Test(description = "Verify that a user can be updated")
     public void testUserUpdate() {
         new RestClient(GO_REST_SERVICE_BASE_URL, updateUserEndpoint, Collections.emptyMap(),
@@ -58,6 +54,7 @@ public class UpdateUserTest extends BaseTest {
                 .body("data.id", notNullValue());
     }
 
+    @Category(USER)
     @Test(description = "Verify that a new user cannot be updated without the authentication")
     public void testUserUpdateWithoutAuthentication() {
         new RestClient(GO_REST_SERVICE_BASE_URL, updateUserEndpoint, Collections.emptyMap(),
@@ -68,6 +65,7 @@ public class UpdateUserTest extends BaseTest {
                 .body("data.message", equalTo("Authentication failed"));
     }
 
+    @Category(USER)
     @Test(description = "Verify that a few parameters of a new user can be updated")
     public void testUserUpdateWithFewParameters() {
         updateUserRequestJson.remove("email");

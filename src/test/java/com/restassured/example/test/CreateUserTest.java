@@ -1,28 +1,23 @@
+package com.restassured.example.test;
+
+import com.restassured.example.Category;
+import com.restassured.example.util.RestClient;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import util.RestClient;
 
 import java.util.Collections;
 
-import static common.HttpMethod.POST;
-import static constant.ApplicationConstants.GO_REST_SERVICE_BASE_URL;
-import static constant.ApplicationConstants.USER_SERVICE_ENDPOINT;
-import static constant.Gender.MALE;
-import static constant.Status.ACTIVE;
+import static com.restassured.example.HttpMethod.POST;
+import static com.restassured.example.constant.ApplicationConstant.GO_REST_SERVICE_BASE_URL;
+import static com.restassured.example.constant.ApplicationConstant.USER_SERVICE_ENDPOINT;
+import static com.restassured.example.test.constant.Gender.MALE;
+import static com.restassured.example.test.constant.Status.ACTIVE;
+import static com.restassured.example.test.constant.TestCategory.USER;
 import static org.apache.commons.lang3.StringUtils.EMPTY;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
-
-/**
- * Project Name    : rest-assured-java-api-automation-demo
- * Developer       : Osanda Deshan
- * Version         : 1.0.0
- * Date            : 14/8/23
- * Time            : 12:11 pm
- * Description     :
- **/
 
 public class CreateUserTest extends BaseTest {
     private final JSONObject createUserRequestJson = new JSONObject();
@@ -40,6 +35,7 @@ public class CreateUserTest extends BaseTest {
         createUserRequestJson.put("status", status);
     }
 
+    @Category(USER)
     @Test(description = "Verify that a new user can be created")
     public void testUserCreation() {
         new RestClient(GO_REST_SERVICE_BASE_URL, USER_SERVICE_ENDPOINT, Collections.emptyMap(),
@@ -53,6 +49,7 @@ public class CreateUserTest extends BaseTest {
                 .body("data.id", notNullValue());
     }
 
+    @Category(USER)
     @Test(description = "Verify that a new user cannot be created without the required fields")
     public void testUserCreationWithoutRequiredFields() {
         new RestClient(GO_REST_SERVICE_BASE_URL, USER_SERVICE_ENDPOINT, Collections.emptyMap(),
@@ -70,6 +67,7 @@ public class CreateUserTest extends BaseTest {
                 .body("data[3].message", equalTo("can't be blank"));
     }
 
+    @Category(USER)
     @Test(description = "Verify that a new user cannot be created without the authentication")
     public void testUserCreationWithoutAuthentication() {
         new RestClient(GO_REST_SERVICE_BASE_URL, USER_SERVICE_ENDPOINT, Collections.emptyMap(),

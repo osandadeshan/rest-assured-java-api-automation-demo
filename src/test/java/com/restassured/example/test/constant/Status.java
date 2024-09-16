@@ -1,13 +1,4 @@
-package constant;
-
-/**
- * Project Name    : rest-assured-java-api-automation-demo
- * Developer       : Osanda Deshan
- * Version         : 1.0.0
- * Date            : 18/8/23
- * Time            : 1:04 pm
- * Description     :
- **/
+package com.restassured.example.test.constant;
 
 public enum Status {
     ACTIVE("active"),

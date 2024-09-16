@@ -1,19 +1,9 @@
-package constant;
+package com.restassured.example.constant;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
-/**
- * Project Name    : rest-assured-java-api-automation-demo
- * Developer       : Osanda Deshan
- * Version         : 1.0.0
- * Date            : 7/8/23
- * Time            : 2:05 pm
- * Description     :
- **/
-
-public class CommonConstants {
+public class CommonConstant {
     private final static Logger logger = LogManager.getLogger();
     public static final String EXECUTION_ENV_NAME = getEnvironmentName();
 
