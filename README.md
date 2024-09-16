@@ -1,13 +1,79 @@
 # API Automation Using Rest Assured & TestNG
 
-This project serves as a boilerplate for automating REST APIs across various environments using TestNG and the Rest Assured library.
+This project provides a template for automating REST API testing across multiple environments using TestNG and the Rest Assured library.
 
 [![Rest Assured Java API Automation CI](https://github.com/osandadeshan/rest-assured-java-api-automation-demo/actions/workflows/rest-assured-java-ci.yml/badge.svg?branch=master)](https://github.com/osandadeshan/rest-assured-java-api-automation-demo/actions/workflows/rest-assured-java-ci.yml)
 
 ## Prerequisites
 1. Java
 2. Maven
-3. NodeJS
+3. IntelliJ IDEA
+
+## Project structure
+
+```
+.github/                                              # GitHub-specific configurations
+logs/                                                 # Log4j log files are stored here
+reports/                                              # Extent report files are generated in this location
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── restassured/
+│   │           └── example/
+│   │               ├── Category.java
+│   │               ├── HttpMethod.java
+│   │               ├── constant/                     # Application-wide constants
+│   │               │   ├── ApplicationConstant.java
+│   │               │   ├── AuthenticationConstant.java
+│   │               │   ├── CommonConstant.java
+│   │               │   └── ReporterConstant.java
+│   │               ├── service/
+│   │               │   ├── ExtentReportService.java  # Extent report setup services
+│   │               │   └── app/                      # Application service classes
+│   │               │       ├── AuthenticationService.java
+│   │               │       └── UserService.java
+│   │               └── util/                         # Utility methods
+│   │                   ├── AnnotationReader.java
+│   │                   └── FileReader.java
+│   │                   └── JsonFormatter.java
+│   │                   └── Log4jFilter.java
+│   │                   └── RestClient.java
+│   │                   └── TestListener.java
+│   └── resources/                                    # Resource files for logging and reporting
+│       ├── log4j2.xml
+│       └── test-reporter.properties
+├── test/
+│   ├── java/
+│   │   └── com/
+│   │       └── restassured/
+│   │           └── example/
+│   │               └── test/
+│   │                   ├── constant/                     # Test constants (e.g., status, categories)
+│   │                   │   ├── Gender.java
+│   │                   │   ├── Status.java
+│   │                   │   └── TestCategory.java
+│   │                   ├── AuthTest.java                 # Authentication tests
+│   │                   ├── BaseTest.java                 # Base test class setup
+│   │                   ├── CreateUserTest.java           # API test for creating a user
+│   │                   ├── DeleteUserTest.java           # API test for deleting a user
+│   │                   ├── GetAllUsersTest.java          # API test for fetching all users
+│   │                   └── UpdateUserTest.java           # API test for updating a user
+│   └── resources/
+│       └── env/                                          # Environment configurations
+│           ├── dev.properties
+│           ├── pre-prod.properties
+│           ├── prod.properties
+│           ├── qa.properties
+│           └── uat.properties
+│       └── regression-suite.xml                          # TestNG test suites configuration
+│       └── smoke-suite.xml
+target/                                                   # Compiled code and build artifacts are stored here
+.gitignore                                                # Specifies files and directories to be ignored by Git
+LICENSE                                                   # License information for the project
+pom.xml                                                   # Maven configuration file for dependencies and build settings
+README.md                                                 # Repository overview and instructions (This file)
+```
 
 ## How to run tests
 1. Using IntelliJ IDEA
