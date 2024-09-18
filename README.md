@@ -12,7 +12,7 @@ This project provides a template for automating REST API testing across multiple
 ## Project structure
 
 ```
-.github/                                              # GitHub-specific configurations
+.github/                                              # GitHub workflow configurations
 logs/                                                 # Log4j log files are stored here
 reports/                                              # Extent report files are generated in this location
 src/
