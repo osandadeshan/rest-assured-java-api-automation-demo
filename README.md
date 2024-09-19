@@ -23,16 +23,20 @@ src/
 │   │           └── example/
 │   │               ├── Category.java
 │   │               ├── HttpMethod.java
-│   │               ├── constant/                     # Application-wide constants
+│   │               ├── constant/                     # Project related constants including Application and Reporter contants
 │   │               │   ├── ApplicationConstant.java
 │   │               │   ├── AuthenticationConstant.java
 │   │               │   ├── CommonConstant.java
 │   │               │   └── ReporterConstant.java
+│   │               ├── model/                        # Model classes which represent the request JSON payload
+│   │               │   ├── AuthenticationRequest.java
+│   │               │   ├── BookingDates.java
+│   │               │   ├── BookingRequest.java
 │   │               ├── service/
 │   │               │   ├── ExtentReportService.java  # Extent report setup services
 │   │               │   └── app/                      # Application service classes
 │   │               │       ├── AuthenticationService.java
-│   │               │       └── UserService.java
+│   │               │       └── BookingService.java
 │   │               └── util/                         # Utility methods
 │   │                   ├── AnnotationReader.java
 │   │                   └── FileReader.java
@@ -49,9 +53,7 @@ src/
 │   │       └── restassured/
 │   │           └── example/
 │   │               └── test/
-│   │                   ├── constant/                     # Test constants (e.g., status, categories)
-│   │                   │   ├── Gender.java
-│   │                   │   ├── Status.java
+│   │                   ├── constant/                     # Test constants
 │   │                   │   └── TestCategory.java
 │   │                   ├── AuthTest.java                 # Authentication tests
 │   │                   ├── BaseTest.java                 # Base test class setup
