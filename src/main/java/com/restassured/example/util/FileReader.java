@@ -28,8 +28,7 @@ public class FileReader {
     }
 
     public static String getTestReporterProperty(String propertyName) {
-        Path filePath = Paths.get(TEST_REPORTER_PROPERTY_FILE_DIRECTORY);
-        return getPropertyFromFile(filePath, propertyName);
+        return getPropertyFromFile(TEST_REPORTER_PROPERTY_FILE_DIRECTORY, propertyName);
     }
 
     private static String getPropertyFromFile(Path filePath, String propertyName) {

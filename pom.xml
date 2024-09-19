@@ -17,7 +17,7 @@
         <rest.assured.version>5.5.0</rest.assured.version>
         <testng.version>7.10.2</testng.version>
         <mockneat.version>0.4.8</mockneat.version>
-        <json.version>20240303</json.version>
+        <jackson-databind>2.17.2</jackson-databind>
         <extent.report.version>5.1.2</extent.report.version>
         <log4j.api.version>2.24.0</log4j.api.version>
         <log4j.core.version>2.24.0</log4j.core.version>
@@ -164,9 +164,9 @@
             <version>${mockneat.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>${json.version}</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind}</version>
         </dependency>
         <dependency>
             <groupId>com.aventstack</groupId>

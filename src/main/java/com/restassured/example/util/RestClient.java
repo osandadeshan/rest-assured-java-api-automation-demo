@@ -127,8 +127,9 @@ public class RestClient {
 
     private RequestSpecBuilder getRequestSpecBuilder(String baseUri, String basePath) {
         return new RequestSpecBuilder()
+//        TODO: Uncomment the following line to use your actual APIs
+//                .setAccept(JSON)
                 .setContentType(JSON)
-                .setAccept(JSON)
                 .setBaseUri(baseUri)
                 .setBasePath(basePath);
     }

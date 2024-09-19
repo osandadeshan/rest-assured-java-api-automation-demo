@@ -55,10 +55,10 @@ src/
 │   │                   │   └── TestCategory.java
 │   │                   ├── AuthTest.java                 # Authentication tests
 │   │                   ├── BaseTest.java                 # Base test class setup
-│   │                   ├── CreateUserTest.java           # API test for creating a user
-│   │                   ├── DeleteUserTest.java           # API test for deleting a user
-│   │                   ├── GetAllUsersTest.java          # API test for fetching all users
-│   │                   └── UpdateUserTest.java           # API test for updating a user
+│   │                   ├── CreateBookingTest.java        # API test for creating a booking
+│   │                   ├── DeleteBookingTest.java        # API test for deleting a booking
+│   │                   ├── GetAllBookingsTest.java       # API test for fetching all bookings
+│   │                   └── UpdateBookingTest.java        # API test for updating a booking
 │   └── resources/
 │       └── env/                                          # Environment configurations
 │           ├── dev.properties
@@ -74,6 +74,11 @@ LICENSE                                                   # License information 
 pom.xml                                                   # Maven configuration file for dependencies and build settings
 README.md                                                 # Repository overview and instructions (This file)
 ```
+
+## ⚠️ Important: Steps to update the APIs
+* Go to `com.restassured.example.util.RestClient`
+* **Uncomment line 131** to enable your actual API functionality.
+* Remove the **"TODO: "** comment, as it is no longer relevant
 
 ## How to run tests
 1. Using IntelliJ IDEA

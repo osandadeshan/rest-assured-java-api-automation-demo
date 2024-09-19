@@ -3,7 +3,7 @@
     <test name="Smoke Test">
         <classes>
             <class name="com.restassured.example.test.AuthTest" />
-            <class name="com.restassured.example.test.GetAllUsersTest" />
+            <class name="com.restassured.example.test.GetAllBookingsTest" />
         </classes>
     </test>
 </suite>
