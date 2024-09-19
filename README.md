@@ -13,8 +13,8 @@ This project provides a template for automating REST API testing across multiple
 
 ```
 .github/                                              # GitHub workflow configurations
-logs/                                                 # Log4j log files are stored here
-reports/                                              # Extent report files are generated in this location
+logs/                                                 # Log4j log files
+reports/                                              # Extent HTML report files
 src/
 ├── main/
 │   ├── java/
