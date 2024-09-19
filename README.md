@@ -28,7 +28,7 @@ src/
 │   │               │   ├── AuthenticationConstant.java
 │   │               │   ├── CommonConstant.java
 │   │               │   └── ReporterConstant.java
-│   │               ├── model/                        # Model classes which represent the request JSON payload
+│   │               ├── model/                        # Model classes which represents the request JSON payload
 │   │               │   ├── AuthenticationRequest.java
 │   │               │   ├── BookingDates.java
 │   │               │   ├── BookingRequest.java
@@ -68,8 +68,8 @@ src/
 │           ├── prod.properties
 │           ├── qa.properties
 │           └── uat.properties
-│       └── regression-suite.xml                          # TestNG test suites configuration
-│       └── smoke-suite.xml
+│       └── regression-suite.xml                          # TestNG regression test suite configuration
+│       └── smoke-suite.xml                               # TestNG smoke test suite configuration
 target/                                                   # Compiled code and build artifacts are stored here
 .gitignore                                                # Specifies files and directories to be ignored by Git
 LICENSE                                                   # License information for the project
